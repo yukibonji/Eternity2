@@ -1,12 +1,16 @@
 ﻿namespace Eternity2
 
 module Basic = 
+
+    let genVar n = 
+        let counter = ref n in fun () -> incr counter; !counter
+
     // Basic type for propositional logic formulas
     type BoolExpr = 
         | Or of BoolExpr * BoolExpr
         | And of BoolExpr * BoolExpr
         | Not of BoolExpr
-        | Var of string
+        | Var of int
         | True 
         | False
 
