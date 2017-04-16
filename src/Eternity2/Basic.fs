@@ -25,7 +25,7 @@ module Basic =
         Not a 
 
     let (=>) a b =
-        Or (a, Not b)
+        Or (Not a, b)
 
     let (<=>) a b = 
         And (a => b, b => a)
